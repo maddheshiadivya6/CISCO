@@ -1,0 +1,31 @@
+1. Plan – Jira, Azure Dashboards
+- Jira: Used to create tasks, track bugs, manage sprints, and plan project work.
+- Azure Dashboards: Used to display project progress, work items, and development metrics.
+
+2. Code – Git, GitHub 
+- Git: A version control tool that tracks changes in source code.
+- GitHub: A platform for hosting Git repositories and collaborating with other developers.
+
+3. Build – Maven, Gradle
+- Maven: A build automation tool commonly used for Java projects to compile code, manage dependencies, and package applications.
+- Gradle: A build automation tool that supports flexible builds and dependency management.
+
+4. Test – JUnit, Selenium
+- JUnit: A testing framework used to perform unit tests on Java code.
+- Selenium: An automation tool used to test web applications through browsers.
+
+5. Release – Jenkins, GitHub Actions
+- Jenkins: An automation server used to create CI/CD pipelines for building, testing, and preparing software releases.
+- GitHub Actions: A GitHub feature used to automate workflows, such as running tests whenever code is pushed.
+
+6. Deploy – Docker, Kubernetes
+- Docker: Used to package an application and its dependencies into containers so it can run consistently across environments.
+- Kubernetes: Used to manage, scale, and maintain containerized applications across a cluster of machines.
+
+7. Operate – Ansible
+- Ansible: An automation tool used to configure servers, install software, and perform routine operational tasks.
+- It reduces manual work by using automation playbooks.
+
+8. Monitor – Grafana
+- Grafana: A monitoring and visualization platform used to display metrics through dashboards.
+- It helps teams identify performance issues and understand application and infrastructure health.
