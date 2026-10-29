@@ -1,0 +1,915 @@
+
+============================================================ PART 1:
+AGILE METHODOLOGY
+============================================================
+
+1.  WHAT IS AGILE?
+
+Agile is an approach to developing software in small parts, collecting
+feedback regularly, and improving the product based on what the team
+learns.
+
+Instead of waiting until the entire project is finished before showing
+it to customers, the team delivers useful parts of the product step by
+step.
+
+Example: A company wants to build an online shopping application. It
+needs login, product search, a shopping cart, payment, and order
+tracking. An Agile team might build and test login first, then product
+search, then the shopping cart, and continue improving the application
+in small steps.
+
+Main characteristics of Agile: - Small, frequent deliveries of useful
+software. - Regular customer and stakeholder feedback. - Close
+collaboration between team members. - Ability to respond to changing
+requirements. - Continuous testing and quality improvement. - Regular
+reflection on how the team can work better. - Focus on working software
+and customer value.
+
+Why use Agile? - Customers can see useful results earlier. - Problems
+and misunderstandings can be discovered sooner. - The team can adjust
+priorities when needs change. - Developers and business representatives
+can communicate regularly. - The team can learn from feedback throughout
+development.
+
+Agile does not mean there is no planning, documentation, or deadlines.
+It means planning and documentation are appropriate to the work and the
+team can adapt when it receives new information.
+
+2.  AGILE AND TRADITIONAL DEVELOPMENT
+
+Traditional development often plans most of the project in advance and
+may deliver working software near the end. Agile development plans and
+delivers work in smaller cycles and collects feedback regularly.
+
+Traditional approach: - Often plans a large amount of work before
+implementation. - Customer feedback may arrive later. - Testing may be
+concentrated toward the end. - Changes late in the project may be
+expensive.
+
+Agile approach: - Plans work in smaller cycles. - Collects feedback
+throughout development. - Tests throughout development. - Uses new
+information to adjust future work.
+
+Neither approach is automatically right for every project. The best
+approach depends on the project, risks, regulations, requirements, and
+environment.
+
+3.  THE FOUR VALUES OF THE AGILE MANIFESTO
+
+1)  Individuals and interactions over processes and tools: Communication
+    between people is especially important. Tools and processes are
+    useful, but they should support collaboration rather than replace
+    it.
+
+2)  Working software over comprehensive documentation: A working product
+    is especially valuable. Documentation is still useful when it helps
+    people build, operate, or understand the product.
+
+3)  Customer collaboration over contract negotiation: The team works
+    with customers to understand needs and feedback, instead of relying
+    only on the original agreement.
+
+4)  Responding to change over following a plan: The team can adapt when
+    new information shows that a different approach would deliver more
+    value.
+
+The word “over” does not mean the item on the right has no value. It
+means the item on the left is valued more when the team must make a
+trade-off.
+
+4.  THE 12 AGILE PRINCIPLES IN SIMPLE ENGLISH
+
+1)  Customer satisfaction: Deliver useful software early and regularly.
+
+2)  Welcome changing requirements: Accept useful changes, even when
+    development has already started.
+
+3)  Frequent delivery: Deliver working software frequently, preferably
+    in short cycles.
+
+4)  Business people and developers collaborate: People who understand
+    business needs and people who build the product communicate
+    regularly.
+
+5)  Trust motivated people: Give team members the support, resources,
+    and environment needed to do good work.
+
+6)  Direct communication: Clear, direct communication helps reduce
+    misunderstanding.
+
+7)  Working software measures progress: Progress should be demonstrated
+    through useful software, not only reports or documents.
+
+8)  Sustainable pace: The team should work at a pace it can maintain
+    without constant exhaustion.
+
+9)  Technical excellence: Good design, clean code, testing, and
+    technical quality make future changes easier.
+
+10) Simplicity: Avoid unnecessary work and complexity.
+
+11) Self-organizing teams: Teams make appropriate decisions about how to
+    organize their work.
+
+12) Regular reflection: The team regularly reviews how it works and
+    makes improvements.
+
+Example: A team building a network-monitoring application learns that
+critical alerts are more important to users than a planned dashboard
+color change. The team can reconsider priorities so that more valuable
+work is addressed sooner.
+
+============================================================ PART 2:
+SCRUM BASICS
+============================================================
+
+5.  WHAT IS SCRUM?
+
+Scrum is a lightweight framework that helps people work together to
+solve complex problems and deliver valuable products through short,
+fixed-length cycles called Sprints.
+
+Scrum provides: - Accountabilities (often informally called roles). -
+Events for planning, inspection, feedback, and improvement. - Artifacts
+that make work visible. - Commitments that help the team focus on goals
+and quality.
+
+Agile is the broader set of values and principles. Scrum is one
+framework that can be used to apply Agile ideas.
+
+6.  WHAT IS A SPRINT?
+
+A Sprint is a fixed period of one month or less during which the Scrum
+Team works toward a Sprint Goal and creates a valuable, usable
+Increment.
+
+A Sprint may last one, two, three, or four weeks. The team chooses a
+suitable length and generally keeps it consistent.
+
+During a Sprint: - The team conducts Sprint Planning. - Developers build
+and test the product. - Developers hold a Daily Scrum every working
+day. - The team conducts a Sprint Review. - The team conducts a Sprint
+Retrospective. - The team works toward the Sprint Goal.
+
+Important Sprint points: - A Sprint has a clear goal. - Quality must not
+be reduced just to finish more work. - The plan can be adapted as the
+team learns more. - Scope can be clarified and renegotiated with the
+Product Owner as long as the Sprint Goal is not endangered. - A Sprint
+lasts no longer than one month.
+
+Example: Sprint Goal: “Provide basic visibility into network devices,
+their health, and active alerts.” The team selects appropriate work,
+develops and tests it, and inspects the result at the end of the Sprint.
+
+7.  WHAT IS AN ITERATION?
+
+An iteration is a repeated cycle of development work in which the team
+plans, builds, tests, and learns.
+
+The words “iteration” and “Sprint” are related but are not exactly
+interchangeable in every methodology: - Scrum formally uses the term
+Sprint. - Other development approaches may call a development cycle an
+iteration. - Both concepts involve repeated cycles of work and learning.
+
+Sprint versus iteration: - A Sprint is a defined Scrum concept with a
+Sprint Goal and Scrum events. - An iteration is a general
+development-cycle term whose structure depends on the methodology being
+used.
+
+============================================================ PART 3:
+SCRUM ROLES AND RESPONSIBILITIES
+============================================================
+
+The three Scrum Team accountabilities are: 1. Product Owner. 2. Scrum
+Master. 3. Developers.
+
+Stakeholders also contribute valuable information and feedback, but they
+are not a fourth formal Scrum Team accountability.
+
+8.  PRODUCT OWNER (PO)
+
+Main responsibility: Maximize the value of the product resulting from
+the Scrum Team’s work.
+
+The Product Owner helps the team understand what product work is most
+valuable and ensures the Product Backlog is effectively managed.
+
+Detailed responsibilities: - Define and communicate the Product Goal. -
+Understand customer needs and business objectives. - Manage the Product
+Backlog. - Make backlog items visible and understandable. - Order
+backlog items according to value, risk, dependencies, and other needs. -
+Clarify requirements and expected outcomes. - Make product-priority
+trade-offs. - Collaborate with stakeholders. - Gather and consider
+feedback. - Inspect product outcomes and adjust future priorities. -
+Help the team understand why the work matters.
+
+Product Owner in Scrum events: - Sprint Planning: explains product value
+and priorities. - Daily Scrum: does not need to attend routinely; the
+event is for Developers. - Sprint Review: discusses the outcome,
+feedback, and future direction. - Sprint Retrospective: participates as
+a member of the Scrum Team.
+
+Example: The Product Owner has possible features such as viewing device
+health, viewing active alerts, and changing dashboard colors. If users
+urgently need to detect network failures, active alerts may be ordered
+above cosmetic work.
+
+The Product Owner does not simply assign every technical task to
+individual Developers. The team collaborates, and Developers decide how
+to do the work.
+
+9.  SCRUM MASTER (SM)
+
+Main responsibility: Establish Scrum as defined in the Scrum Guide and
+help the Scrum Team become more effective.
+
+The Scrum Master is a leader who serves the Scrum Team, the Product
+Owner, and the organization.
+
+Detailed responsibilities: - Teach and coach the team on Scrum. - Help
+people understand Scrum values, events, artifacts, and commitments. -
+Encourage self-management and cross-functional collaboration. - Help
+remove impediments that slow or block progress. - Help Scrum events
+remain useful and effective. - Support the Product Owner with backlog
+management and stakeholder collaboration. - Promote transparency about
+work, progress, and problems. - Encourage continuous improvement. - Help
+the organization understand Scrum. - Work with others to remove
+organizational barriers.
+
+An impediment is anything that prevents or slows progress.
+
+Examples: - A developer cannot access the test environment. - A required
+software license is unavailable. - Another team has not provided a
+needed API. - Requirements are unclear and block testing.
+
+The Scrum Master helps address these obstacles. The Scrum Master is not
+the only person who can solve a problem and is not simply a traditional
+boss or task-assignment manager.
+
+Scrum Master in Scrum events: - Sprint Planning: helps the event happen
+effectively. - Daily Scrum: helps Developers understand its purpose and
+keep it effective when needed. - Sprint Review: helps the event remain
+collaborative and useful. - Sprint Retrospective: helps the team inspect
+its working practices and plan improvements.
+
+10. DEVELOPERS
+
+Main responsibility: Create a usable Increment that meets the Definition
+of Done during each Sprint.
+
+Developers are the people doing the work needed to create the product.
+Depending on the product, their skills may include programming, testing,
+design, analysis, operations, security, and other areas.
+
+Detailed responsibilities: - Create a plan for the Sprint work. - Decide
+how to implement selected work. - Design and develop features. - Write
+and maintain code when coding is part of the work. - Test features and
+investigate defects. - Fix bugs. - Collaborate with teammates. -
+Maintain quality according to the Definition of Done. - Inspect progress
+toward the Sprint Goal. - Update the Sprint Backlog as the plan
+changes. - Integrate completed work into the product. - Create a usable
+Increment.
+
+Example: For a device-health feature, Developers may clarify
+requirements, design the API, implement the user interface, write tests,
+fix bugs, and verify that the feature meets the Definition of Done.
+
+Developers are collectively accountable for the Increment. Work may be
+divided among individuals, but the team shares responsibility for
+product quality.
+
+11. STAKEHOLDERS
+
+Stakeholders are people or groups who have an interest in the product or
+are affected by it.
+
+Examples: - Customers and end users. - Business managers. - Customer
+support. - Operations teams. - Security and compliance teams. - Sales
+and marketing teams.
+
+How stakeholders contribute: - Explain business needs and user
+problems. - Share expectations and constraints. - Provide feedback on
+product outcomes. - Explain real-world usage. - Identify risks and
+dependencies. - Communicate changing customer or market needs. -
+Collaborate with the Product Owner on product direction.
+
+Example: A network operations engineer says critical alerts must be easy
+to identify during an outage. This feedback can help the Product Owner
+and Developers improve how alerts are displayed.
+
+Stakeholders provide feedback and information. They do not automatically
+control the Sprint Backlog or assign tasks directly to Developers.
+
+12. ROLE COMPARISON
+
+Product Owner: - Focuses on product value and backlog priorities. - Is
+accountable for effective Product Backlog management. - Explains
+customer and business needs.
+
+Scrum Master: - Focuses on Scrum effectiveness and team improvement. -
+Coaches and supports the Scrum Team. - Helps address impediments.
+
+Developers: - Focus on building a usable product Increment. - Plan and
+adapt their work. - Ensure the Increment meets the Definition of Done.
+
+Stakeholders: - Provide needs, expectations, context, and feedback. -
+Help the team understand users and business conditions.
+
+Easy way to remember: - Product Owner: What is valuable, and why? -
+Scrum Master: How can the team use Scrum effectively? - Developers: How
+will we build a usable Increment? - Stakeholders: What do users and the
+business need?
+
+============================================================ PART 4:
+SCRUM EVENTS
+============================================================
+
+Scrum has five events: 1. Sprint. 2. Sprint Planning. 3. Daily Scrum. 4.
+Sprint Review. 5. Sprint Retrospective.
+
+13. SPRINT PLANNING
+
+Purpose: Decide why the Sprint is valuable, what work can be completed,
+and how the work will be done.
+
+What happens: 1. Discuss why the Sprint is valuable. 2. Consider the
+Product Backlog and select suitable work. 3. Establish the Sprint Goal.
+4. Plan how the selected work can be delivered.
+
+Example: Sprint Goal: “Provide basic visibility into network devices,
+health, and alerts.” Possible selected stories: - View network devices:
+2 story points. - View device health: 3 story points. - View active
+alerts: 3 story points.
+
+These numbers are examples only; story points are relative estimates.
+
+Responsibilities: - Product Owner: explains value, priorities, and
+requirements. - Developers: discuss what can be done and how to do it. -
+Scrum Master: helps ensure the event happens and its purpose is
+understood.
+
+Output: The Sprint Backlog, including the Sprint Goal, selected Product
+Backlog items, and a plan for delivering the work.
+
+The Product Owner does not simply assign tasks. Developers plan how the
+work will be completed.
+
+14. DAILY SCRUM
+
+Purpose: Inspect progress toward the Sprint Goal and adapt the plan for
+the next day’s work.
+
+The Daily Scrum is a 15-minute event for Developers, held every working
+day of the Sprint.
+
+Developers may discuss: - Are we making progress toward the Sprint
+Goal? - What should we focus on next? - Are there blockers? - Do we need
+to adjust our plan?
+
+Example: - Developer A: “The alert API is ready.” - Developer B: “The
+alert display is in progress.” - Developer C: “I cannot test because the
+test server is unavailable.”
+
+The team coordinates next steps and works to address the blocker.
+
+Important points: - It is 15 minutes. - It is held every working day of
+the Sprint. - It is for coordination and adapting the plan, not a long
+problem-solving meeting. - Detailed technical discussions can continue
+afterward. - It is not merely a status report to a manager.
+
+15. SPRINT REVIEW
+
+Purpose: Inspect the Sprint outcome and determine useful next steps with
+stakeholders.
+
+What happens: 1. The team explains the Sprint Goal. 2. The team presents
+or demonstrates the product outcome. 3. Stakeholders inspect the result
+and provide feedback. 4. The participants discuss business needs and new
+information. 5. The Product Backlog may be adjusted.
+
+Example: The team demonstrates a network dashboard. A stakeholder asks
+for a way to identify devices that have been offline for more than five
+minutes. The Product Owner considers this feedback and may add or
+reorder backlog items.
+
+Responsibilities: - Developers explain and demonstrate the product
+outcome. - Product Owner discusses product direction and priorities. -
+Scrum Master helps the event remain useful and collaborative. -
+Stakeholders inspect the outcome and provide feedback.
+
+The Sprint Review focuses on the product and its future direction. It is
+not just a formal presentation.
+
+16. SPRINT RETROSPECTIVE
+
+Purpose: Plan ways to improve quality and effectiveness.
+
+The Scrum Team reviews how the Sprint went, including collaboration,
+tools, processes, practices, and quality.
+
+Questions: - What went well? - What did not go well? - What problems
+occurred? - What could we do differently? - Which improvement should we
+try next?
+
+Example: Testing was delayed because requirements were unclear. The team
+agrees to clarify acceptance criteria earlier and review test scenarios
+before coding.
+
+Responsibilities: - Developers share what helped or hindered delivery. -
+Product Owner participates as a Scrum Team member. - Scrum Master helps
+the team conduct the Retrospective effectively and supports
+improvements.
+
+Important points: - Focuses on how the team works. - Encourages honest
+discussion without blaming people. - Should produce useful improvements,
+not only complaints. - Improvements should be followed up in later
+Sprints.
+
+17. SPRINT REVIEW VERSUS RETROSPECTIVE
+
+Sprint Review: - Focus: product outcome. - Discusses what was built and
+learned. - Includes relevant stakeholders. - Feedback may affect product
+priorities. - Example: “Users need a severity filter.”
+
+Sprint Retrospective: - Focus: team effectiveness and quality. -
+Discusses how the team worked. - Is for the Scrum Team. - Produces
+improvements to working practices. - Example: “We should review test
+cases earlier.”
+
+Memory tip: Review = inspect the product and its future direction.
+Retrospective = inspect the way the team works.
+
+============================================================ PART 5:
+SCRUM ARTIFACTS
+============================================================
+
+Scrum artifacts make work and progress visible. Each artifact has a
+commitment that helps the team focus.
+
+18. PRODUCT BACKLOG
+
+The Product Backlog is an ordered, evolving list of work that may be
+needed to improve the product.
+
+It can include: - New features. - Improvements. - Bug fixes. - Technical
+work. - Research or other work needed for the product.
+
+Example Product Backlog for NetPulse: 1. View active alerts. 2. View
+device health. 3. View network devices. 4. Acknowledge an alert. 5.
+Filter alerts by severity. 6. View device metrics.
+
+This is an illustrative order. Real priorities depend on current product
+needs.
+
+The Product Owner is accountable for effective Product Backlog
+management. This includes making items visible and understandable and
+ordering them appropriately. The Product Owner may ask Developers and
+stakeholders to help clarify or refine items.
+
+19. PRODUCT BACKLOG REFINEMENT
+
+Refinement is an ongoing activity in which the team breaks down and
+clarifies backlog items, adds details, and improves estimates where
+useful.
+
+Example: “Build a monitoring dashboard” may be too broad. It can be
+broken into: - View network devices. - View device health. - View active
+alerts. - Filter alerts by severity.
+
+Refinement is an activity, not a separate formal Scrum event.
+
+20. PRODUCT GOAL
+
+The Product Goal is the long-term objective for the Scrum Team.
+
+Example: “Provide operators with a reliable platform to monitor network
+health and respond to issues.”
+
+The Product Backlog evolves to help the team move toward this goal.
+
+21. SPRINT BACKLOG
+
+The Sprint Backlog contains: - The Sprint Goal. - Product Backlog items
+selected for the Sprint. - The plan for delivering the work.
+
+Example: Sprint Goal: “Provide basic visibility into network devices,
+health, and alerts.”
+
+Selected items: - View network devices: 2 points. - View device health:
+3 points. - View active alerts: 3 points.
+
+Developers may break items into tasks: - Design the API. - Implement the
+endpoint. - Build the user interface. - Write tests. - Integrate the
+feature.
+
+Developers create and update the Sprint Backlog. It is not a fixed list
+that can never change. The plan can be updated as the team learns more,
+while the team continues to pursue the Sprint Goal.
+
+22. SPRINT GOAL
+
+The Sprint Goal is the single objective that gives the Sprint direction.
+
+Example: “Provide basic visibility into network devices, health, and
+active alerts.”
+
+If a technical dependency makes one selected item harder than expected,
+the team can discuss adjusting its plan and scope while protecting the
+Sprint Goal.
+
+23. INCREMENT
+
+An Increment is a concrete, usable step toward the Product Goal that
+meets the Definition of Done.
+
+Example: If the product already displays network devices, a new
+completed device-health feature can become part of the Increment once it
+is integrated and meets the Definition of Done.
+
+Important points: - The Increment must be usable. - It must meet the
+Definition of Done. - It should integrate with previous Increments. -
+Multiple Increments can be created during one Sprint. - The Increment
+does not necessarily have to be publicly released immediately.
+
+24. THE THREE ARTIFACTS AND THEIR COMMITMENTS
+
+Product Backlog -> Product Goal: The long-term objective for the
+product.
+
+Sprint Backlog -> Sprint Goal: The objective for the current Sprint.
+
+Increment -> Definition of Done: The quality standard that work must
+meet to be considered complete.
+
+25. PRODUCT BACKLOG VERSUS SPRINT BACKLOG
+
+Product Backlog: - Contains potential work for the product. - Supports
+the Product Goal. - Is ordered by the Product Owner. - Can include work
+for many future Sprints. - Evolves as product needs change.
+
+Sprint Backlog: - Contains the current Sprint Goal, selected items, and
+delivery plan. - Supports the Sprint Goal. - Is created and managed by
+Developers. - Focuses on the current Sprint. - Changes as Developers
+learn more during the Sprint.
+
+============================================================ PART 6:
+USER STORIES, EPICS, STORY POINTS, AND ACCEPTANCE CRITERIA
+============================================================
+
+26. USER STORY
+
+A user story is a short description of a feature from the user’s
+perspective.
+
+Common format: “As a [type of user], I want [a feature or capability],
+so that [a benefit or reason].”
+
+Example: “As a network operator, I want to view active alerts so that I
+can quickly identify network problems.”
+
+Parts of the story: - “As a network operator” = who needs it. - “I want
+to view active alerts” = what is needed. - “So that I can quickly
+identify network problems” = why it is useful.
+
+Why use user stories? - They explain requirements in a user-focused
+way. - They help the team understand the value of a feature. - They
+encourage discussion. - They organize work into manageable pieces. -
+They provide a starting point for acceptance criteria and testing.
+
+The Product Owner is accountable for Product Backlog management, but
+user stories can be written and refined collaboratively by the Product
+Owner, Developers, and stakeholders. A user story is a common Agile
+technique, not a format required by Scrum itself.
+
+27. EPIC
+
+An epic is a large piece of work that can be broken into smaller
+stories.
+
+Example epic: “Monitor network devices.”
+
+Possible stories: 1. As an operator, I want to view all network devices.
+2. As an operator, I want to see the health of each device. 3. As an
+operator, I want to view active alerts. 4. As an operator, I want to
+filter alerts by severity. 5. As an operator, I want to view device
+metrics.
+
+Epic versus user story: - Epic: a large requirement or feature area. -
+User story: a smaller, specific user need. - An epic may contain several
+related stories. - A story may be small enough to estimate and implement
+within a Sprint.
+
+An epic is a commonly used backlog concept, not a separate formal Scrum
+artifact.
+
+28. STORY POINTS
+
+Story points estimate the relative size of work. They may account for
+effort, complexity, and uncertainty. They are not a direct measurement
+of time.
+
+Example: - View network devices: 2 points. - View device health: 3
+points. - Integrate complex alert processing: 8 points.
+
+These numbers are examples. Each team estimates work according to its
+context.
+
+When estimating, the team may consider: - Effort: how much work may be
+involved. - Complexity: how difficult the problem is. - Uncertainty: how
+much is unknown. - Dependencies: whether the work relies on other
+systems or teams.
+
+Some teams use Fibonacci-style scales such as 1, 2, 3, 5, 8, and 13.
+Larger numbers represent work with greater relative size or uncertainty.
+
+Why use story points? - Compare the relative size of backlog items. -
+Support planning discussions. - Identify stories that may be too
+large. - Learn from previous delivery patterns.
+
+29. VELOCITY
+
+Velocity is the amount of work a team completes in a Sprint, often
+measured in story points if that team uses story-point estimation.
+
+Example: - Sprint 1: 18 completed points. - Sprint 2: 20 completed
+points. - Sprint 3: 19 completed points.
+
+The team may use its past results to inform future planning. Velocity is
+a planning aid, not a measure of individual productivity or a target
+that should be manipulated. Story points are team-specific, so comparing
+velocity across teams is usually misleading.
+
+Story points versus hours: - Story points estimate relative size and
+uncertainty. - Hours estimate time. - Story points do not have a
+universal conversion to hours. - Different teams may use different
+story-point scales.
+
+30. ACCEPTANCE CRITERIA
+
+Acceptance criteria are specific conditions that a user story or feature
+must satisfy to meet the agreed requirements.
+
+Example user story: “As a user, I want to log in so that I can access my
+account.”
+
+Possible acceptance criteria: 1. The user can enter a registered email
+address and password. 2. Valid credentials allow the user to log in. 3.
+Invalid credentials produce a suitable error message. 4. The password is
+not displayed as plain text while being entered. 5. An unauthenticated
+user cannot access protected account pages.
+
+These are examples. Actual criteria should reflect the product’s
+security and business requirements.
+
+How acceptance criteria help: - Clarify what a feature must do. - Help
+Developers understand expected behavior. - Help testers create test
+cases. - Reduce misunderstandings. - Help verify whether the story meets
+its requirements.
+
+Example test cases: - Enter a registered email and correct password;
+verify login succeeds. - Enter an incorrect password; verify a suitable
+error appears. - Type a password; verify it is masked. - Open a
+protected account page without logging in; verify access is denied.
+
+31. ACCEPTANCE CRITERIA VERSUS DEFINITION OF DONE
+
+Acceptance criteria: - Specific to a particular feature or backlog
+item. - Describe the required behavior. - Example: invalid password
+displays an error.
+
+Definition of Done: - A shared quality standard for the Increment. -
+Describes the quality state required for completion. - Example: required
+automated tests pass.
+
+A feature may satisfy its acceptance criteria but still fail the
+Definition of Done if required quality checks have not been completed.
+
+32. DEFINITION OF DONE (DoD)
+
+The Definition of Done is the shared formal description of the state an
+Increment must meet to satisfy the required quality measures.
+
+It helps everyone understand what “done” means. Without it, one person
+may consider coding complete while another expects tests, reviews, and
+integration.
+
+Example Definition of Done: - The feature is implemented. - Required
+code review is completed. - Required automated tests pass. - Acceptance
+criteria are satisfied. - The change is integrated with the product. -
+Required security and quality checks pass. - The feature is usable and
+meets the agreed quality standard.
+
+The exact Definition of Done depends on the product, organization, and
+applicable standards. The list above is an example, not a universal
+checklist.
+
+The Scrum Team is responsible for creating an Increment that meets the
+Definition of Done. Developers follow the Definition of Done while
+creating the Increment. If several Scrum Teams work on the same product,
+they must follow the same Definition of Done.
+
+If an item does not meet the Definition of Done, it is not part of the
+Increment. It returns to the Product Backlog for future consideration.
+
+============================================================ PART 7: HOW
+ALL THE CONCEPTS WORK TOGETHER
+============================================================
+
+33. COMPLETE SCRUM WORKFLOW
+
+Example product: NetPulse, a network-monitoring application.
+
+Step 1: Define the Product Goal. The product should help network
+operators monitor devices and respond to network problems.
+
+Step 2: Create the Product Backlog. List potential features such as
+device health, active alerts, and device metrics.
+
+Step 3: Refine backlog items. Clarify requirements, break large items
+into smaller items, and estimate them when useful.
+
+Step 4: Conduct Sprint Planning. Choose a Sprint Goal, select suitable
+work, and plan how to deliver it.
+
+Step 5: Work during the Sprint. Developers implement and test features.
+They hold the Daily Scrum each working day and adapt their plan.
+
+Step 6: Check the Definition of Done. Confirm that completed work meets
+the team’s agreed quality standards.
+
+Step 7: Create an Increment. Integrate usable work that meets the
+Definition of Done.
+
+Step 8: Conduct the Sprint Review. Inspect the product outcome with
+stakeholders and discuss feedback and possible next steps.
+
+Step 9: Conduct the Sprint Retrospective. Discuss how the team worked
+and identify improvements.
+
+Step 10: Start the next Sprint. Use the updated Product Backlog,
+feedback, and lessons learned to continue improving the product.
+
+The Daily Scrum happens throughout the Sprint, not only after
+development is complete.
+
+34. SCRUM BOARD
+
+A Scrum board is a visual way to track work during a Sprint. Teams may
+use a physical board or a tool such as Jira.
+
+A simple board can contain: - To Do: work that has not started. - In
+Progress: work currently being performed. - Done: work that satisfies
+the team’s completion criteria.
+
+Example: To Do: - View device health. - View active alerts.
+
+In Progress: - View network devices.
+
+Done: - Completed and verified work.
+
+Teams may use different columns. Moving a card to Done does not
+automatically prove that it meets the Definition of Done; the agreed
+quality standards must still be followed.
+
+35. AGILE VERSUS SCRUM
+
+Agile: - A broad mindset based on values and principles. - Includes
+several approaches and methods. - Encourages feedback, collaboration,
+and adaptation. - Does not prescribe one single workflow for all teams.
+
+Scrum: - A specific framework. - Defines accountabilities, events,
+artifacts, and commitments. - Uses Sprints to organize work and
+learning. - Provides a structure for inspection and adaptation.
+
+Other Agile approaches include Kanban and Extreme Programming (XP).
+Scrum teams may also use engineering practices from other approaches.
+
+============================================================ PART 8:
+IMPORTANT DIFFERENCES
+============================================================
+
+Agile versus Scrum: Agile is a broad approach and set of values; Scrum
+is a specific framework.
+
+Sprint versus iteration: A Sprint is a formal Scrum concept; iteration
+is a general development-cycle term.
+
+Epic versus user story: An epic is a large requirement; a user story is
+a smaller user-focused need.
+
+Product Backlog versus Sprint Backlog: The Product Backlog contains
+potential product work; the Sprint Backlog contains the Sprint Goal,
+selected items, and the plan for the current Sprint.
+
+Product Goal versus Sprint Goal: The Product Goal is the long-term
+product objective; the Sprint Goal is the objective for the current
+Sprint.
+
+Acceptance criteria versus Definition of Done: Acceptance criteria
+describe requirements for a specific item; the Definition of Done
+describes the shared quality standard for the Increment.
+
+Sprint Review versus Sprint Retrospective: The Review inspects the
+product outcome and future direction; the Retrospective improves the
+team’s way of working.
+
+Product Owner versus Scrum Master: The Product Owner focuses on product
+value and backlog management; the Scrum Master focuses on Scrum
+effectiveness and team improvement.
+
+Scrum Master versus Developers: The Scrum Master coaches and supports
+Scrum effectiveness; Developers create the product Increment.
+
+Story points versus hours: Story points estimate relative size; hours
+estimate time.
+
+Increment versus unfinished work: An Increment is usable and meets the
+Definition of Done; unfinished work that does not meet it is not part of
+the Increment.
+
+============================================================ PART 9:
+QUICK REVISION
+============================================================
+
+Agile: Develop software in small steps, get feedback, and improve
+continuously.
+
+Scrum: A framework for working in Sprints to deliver value.
+
+Sprint: A fixed period of one month or less with a Sprint Goal.
+
+Iteration: A repeated cycle of development work.
+
+User story: A short description of a user need and its benefit.
+
+Epic: A large requirement that can be broken into smaller stories.
+
+Story point: An estimate of relative work size, complexity, and
+uncertainty.
+
+Acceptance criteria: Conditions a particular feature must satisfy.
+
+Product Owner: Maximizes product value and is accountable for effective
+Product Backlog management.
+
+Scrum Master: Helps the team and organization use Scrum effectively.
+
+Developers: Create a usable Increment that meets the Definition of Done.
+
+Stakeholders: Provide business context, needs, and feedback.
+
+Sprint Planning: Plans why the Sprint is valuable, what can be done, and
+how.
+
+Daily Scrum: A 15-minute event for Developers to inspect progress and
+adapt their plan.
+
+Sprint Review: Inspects the product outcome with stakeholders and
+considers next steps.
+
+Sprint Retrospective: Identifies improvements to the team’s quality and
+effectiveness.
+
+Product Backlog: Ordered, evolving list of potential product work.
+
+Sprint Backlog: Sprint Goal, selected Product Backlog items, and
+delivery plan.
+
+Increment: A usable step toward the Product Goal that meets the
+Definition of Done.
+
+Sprint Goal: The objective that gives the current Sprint direction.
+
+Product Goal: The long-term objective for the product.
+
+Definition of Done: The shared quality standard an Increment must meet.
+
+============================================================ PART 10:
+SAMPLE INTERVIEW ANSWER
+============================================================
+
+Question: “Explain Agile and Scrum in simple words.”
+
+Answer: “Agile is an approach to software development that focuses on
+delivering value in small steps, collecting feedback regularly, and
+adapting to change. Scrum is an Agile framework that organizes work into
+Sprints.
+
+The Product Owner focuses on product value and backlog priorities. The
+Scrum Master helps the team use Scrum effectively and improve.
+Developers build and test the product and create a usable Increment that
+meets the Definition of Done.
+
+Sprint Planning establishes the Sprint Goal and plans the work. The
+Daily Scrum helps Developers coordinate. The Sprint Review inspects the
+product outcome with stakeholders, and the Sprint Retrospective helps
+the team improve its way of working.
+
+The Product Backlog contains potential product work. The Sprint Backlog
+contains the current Sprint Goal, selected items, and the plan.
+Acceptance criteria describe what a particular feature must do, while
+the Definition of Done describes the shared quality standard for
+completed work.”
+
+============================================================ END OF
