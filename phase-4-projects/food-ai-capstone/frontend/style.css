@@ -1,0 +1,23 @@
+:root { font-family: system-ui, sans-serif; color: #23322a; background: #f3f6f0; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header { background: #173d2b; color: white; padding: 1.4rem 5%; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+h1, h2, p { margin: 0 0 .7rem; }
+header form, .row { display: flex; flex-wrap: wrap; align-items: end; gap: .7rem; }
+main { max-width: 1200px; margin: auto; padding: 1rem; display: grid; gap: 1rem; }
+.panel { background: white; border-radius: .7rem; padding: 1.2rem; box-shadow: 0 2px 10px #183d2b15; }
+label { display: inline-flex; flex-direction: column; gap: .25rem; }
+input, select, textarea, button { font: inherit; border: 1px solid #aebdb2; border-radius: .3rem; padding: .5rem; }
+button { background: #225d3d; color: white; border-color: #225d3d; cursor: pointer; }
+button:hover { background: #173d2b; }
+button:disabled { opacity: .6; cursor: wait; }
+textarea { display: block; width: 100%; margin: .4rem 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .8rem; margin-top: 1rem; }
+.card, .message, .action { border: 1px solid #d5e0d7; border-radius: .4rem; padding: .8rem; margin: .5rem 0; }
+.card p { margin: .3rem 0; }
+.card input { width: 5rem; }
+.messages { max-height: 28rem; overflow-y: auto; }
+.message { white-space: pre-wrap; overflow-wrap: anywhere; }
+.message.user { background: #eef7ef; }
+.source { color: #456a54; font-size: .85rem; }
+#notice { min-height: 1.5rem; color: #974221; }

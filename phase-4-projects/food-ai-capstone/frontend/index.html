@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food AI Restaurant Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <div><h1>Food AI</h1><p>Restaurant ordering &amp; assistant demo</p></div>
+  <form id="login"><label>Username <input name="username" required autocomplete="username"></label>
+    <label>Password <input name="password" type="password" required autocomplete="current-password"></label>
+    <button>Sign in</button><button type="button" id="logout">Sign out</button></form>
+</header>
+<main>
+  <p id="notice" role="status" aria-live="polite"></p>
+  <section class="panel">
+    <h2>Menu</h2>
+    <form id="filters" class="row">
+      <label>Search <input name="keyword"></label>
+      <label>Type <select name="vegetarian"><option value="">All</option><option value="true">Vegetarian</option><option value="false">Non-vegetarian</option></select></label>
+      <label>Maximum price (INR) <input name="max_price" type="number" min="1"></label>
+      <button>Search</button>
+    </form>
+    <div id="menu" class="grid"></div>
+  </section>
+  <section class="panel">
+    <h2>My orders</h2>
+    <button id="refresh-orders">Refresh orders</button><div id="orders"></div>
+  </section>
+  <section class="panel">
+    <h2>Assistant</h2>
+    <p>Ask about the menu, non-vegetarian food, availability, orders or policies. Orders and cancellations need confirmation.</p>
+    <div class="row"><button id="new-chat">New chat</button><label>Session <select id="sessions"></select></label></div>
+    <div id="messages" class="messages" aria-live="polite"></div>
+    <div id="actions"></div>
+    <form id="chat-form"><label for="chat-input">Your message</label>
+      <textarea id="chat-input" maxlength="4000" required rows="3"></textarea><button>Send</button></form>
+  </section>
+  <section class="panel">
+    <h2>Admin tools</h2>
+    <p>Use an admin account to create or update a menu item, update an order, or index a policy document.</p>
+    <form id="item-form" class="row">
+      <label>Item ID (for update) <input name="id" type="number" min="1"></label>
+      <label>Title <input name="title" minlength="3" maxlength="120" required></label>
+      <label>Category <input name="category" required></label>
+      <label>Price (INR) <input name="price" type="number" min="0.01" step="0.01" required></label>
+      <label>Available portions <input name="capacity" type="number" min="0" required></label>
+      <label><input name="vegetarian" type="checkbox" checked> Vegetarian</label>
+      <label><input name="active" type="checkbox" checked> Active</label>
+      <button>Save item</button>
+    </form>
+    <form id="status-form" class="row"><label>Order ID <input name="id" type="number" min="1" required></label>
+      <label>Status <select name="status"><option>PREPARING</option><option>DELIVERED</option></select></label><button>Update status</button></form>
+    <form id="upload-form" class="row"><label>Policy document <input name="file" type="file" accept=".txt,.pdf,.docx" required></label><button>Upload and index</button></form>
+  </section>
+</main>
+<script src="/static/script.js" defer></script>
+</body>
+</html>

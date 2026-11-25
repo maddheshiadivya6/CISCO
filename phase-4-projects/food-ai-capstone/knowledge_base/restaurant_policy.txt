@@ -1,0 +1,9 @@
+Fictional restaurant policy, version 1. Effective 2026-01-01.
+An order may be cancelled while it is confirmed and before preparation begins.
+Once preparation begins, cancellation is unavailable in this demo.
+No actual payment or delivery is performed.
+
+Declared ingredients and allergens, version 1. Effective 2026-01-01.
+Masala Dosa contains rice, lentils, potato and spices. Sambar may contain mustard.
+Paneer Biryani contains milk. Mango Lassi contains milk. Gulab Jamun contains milk and wheat.
+Shared kitchen equipment is used and cross-contact cannot be ruled out. Never guarantee allergen safety.
