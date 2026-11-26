@@ -33,6 +33,7 @@ def message_dict(message: ChatMessage) -> dict:
 
 
 def add_message(db: Session, session_id: int, role: str, content: str, details: dict) -> ChatMessage:
+    db.scalar(select(ChatSession.id).where(ChatSession.id == session_id).with_for_update())
     seq = db.scalar(select(func.max(ChatMessage.seq_no)).where(ChatMessage.session_id == session_id)) or 0
     message = ChatMessage(session_id=session_id, seq_no=seq + 1, role=role, content=content, details=details)
     db.add(message)
@@ -127,7 +128,8 @@ async def send_message(session_id: int, data: MessageInput, request: Request,
 def confirm_action(action_id: int, data: ConfirmInput, user: User = Depends(current_user),
                    db: Session = Depends(get_db)):
     begin_write(db)
-    action = db.scalar(select(PendingAction).where(PendingAction.id == action_id, PendingAction.user_id == user.id))
+    action = db.scalar(select(PendingAction).where(PendingAction.id == action_id, PendingAction.user_id == user.id)
+                       .with_for_update().execution_options(populate_existing=True))
     if not action:
         raise HTTPException(404, "Action not found")
     if action.status == "CONFIRMED" and data.confirm:
@@ -153,7 +155,7 @@ def confirm_action(action_id: int, data: ConfirmInput, user: User = Depends(curr
                 ]}), f"agent-action-{action.id}",
                     {str(line["item_id"]): str(line["unit_price"]) for line in lines})
             elif action.action == "CANCEL":
-                order = OrderRepository(db).get_owned(action.payload["order_id"], user.id)
+                order = OrderRepository(db).get_owned(action.payload["order_id"], user.id, for_update=True)
                 if not order:
                     raise HTTPException(404, "Order not found")
                 if order.status != action.payload["status"]:

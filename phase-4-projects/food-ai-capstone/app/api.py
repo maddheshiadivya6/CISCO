@@ -45,7 +45,7 @@ def create_menu_item(data: MenuInput, _: User = Depends(admin_user), db: Session
 @router.put("/menu_items/{item_id}", response_model=MenuResponse)
 def update_menu_item(item_id: int, data: MenuInput, _: User = Depends(admin_user), db: Session = Depends(get_db)):
     begin_write(db)
-    item = db.get(MenuItem, item_id)
+    item = MenuRepository(db).get_for_update(item_id)
     if not item:
         raise HTTPException(404, "Menu item not found")
     duplicate = db.scalar(select(MenuItem.id).where(MenuItem.title == data.title, MenuItem.id != item_id))
@@ -60,7 +60,7 @@ def update_menu_item(item_id: int, data: MenuInput, _: User = Depends(admin_user
 @router.delete("/menu_items/{item_id}", status_code=204)
 def disable_menu_item(item_id: int, _: User = Depends(admin_user), db: Session = Depends(get_db)):
     begin_write(db)
-    item = db.get(MenuItem, item_id)
+    item = MenuRepository(db).get_for_update(item_id)
     if not item:
         raise HTTPException(404, "Menu item not found")
     item.active = False
@@ -93,7 +93,7 @@ def get_order(order_id: int, user: User = Depends(current_user), db: Session = D
 @router.post("/orders/{order_id}/cancel", response_model=OrderResponse)
 def cancel_order(order_id: int, user: User = Depends(current_user), db: Session = Depends(get_db)):
     begin_write(db)
-    order = OrderRepository(db).get_owned(order_id, user.id)
+    order = OrderRepository(db).get_owned(order_id, user.id, for_update=True)
     if not order:
         raise HTTPException(404, "Order not found")
     order_service(db).cancel(order)
@@ -104,7 +104,8 @@ def cancel_order(order_id: int, user: User = Depends(current_user), db: Session 
 @router.patch("/admin/orders/{order_id}/status", response_model=OrderResponse)
 def update_order_status(order_id: int, data: StatusInput, _: User = Depends(admin_user), db: Session = Depends(get_db)):
     begin_write(db)
-    order = db.get(Order, order_id)
+    order = db.scalar(select(Order).where(Order.id == order_id).with_for_update()
+                      .execution_options(populate_existing=True))
     if not order:
         raise HTTPException(404, "Order not found")
     if (order.status, data.status) not in {("CONFIRMED", "PREPARING"), ("PREPARING", "DELIVERED")}:

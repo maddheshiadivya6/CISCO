@@ -8,13 +8,21 @@ from sqlalchemy import select
 
 import app.agent as agent_module
 import app.rag as rag_module
-from app.database import SessionLocal
+from app.database import Base, SessionLocal
 from app.main import app
 from app.models import ChatMessage, PendingAction, ToolRun, User
 
 ALICE = ("alice", "alice-demo")
 BOB = ("bob", "bob-demo")
 ADMIN = ("admin", "admin-demo")
+
+
+def test_food_ai_tables_are_isolated():
+    assert Base.metadata.tables
+    assert all(name.startswith("food_ai_") for name in Base.metadata.tables)
+    for table in Base.metadata.tables.values():
+        assert all(foreign_key.column.table.name.startswith("food_ai_")
+                   for foreign_key in table.foreign_keys)
 
 
 @pytest.fixture(scope="module")
@@ -69,11 +77,37 @@ def test_concurrent_last_portion(client):
         "title": "Last portion", "category": "Main", "vegetarian": True, "price": "40", "capacity": 1,
     }).json()
     def buy(n):
-        return create_order(client, key=f"last-{n}", item_id=item["id"]).status_code
+        return create_order(client, auth=ALICE if n == 1 else BOB, key=f"last-{n}", item_id=item["id"]).status_code
     with ThreadPoolExecutor(max_workers=2) as pool:
         statuses = sorted(pool.map(buy, [1, 2]))
     assert statuses == [201, 409]
     assert client.get(f"/api/menu_items/{item['id']}").json()["capacity"] == 0
+
+
+def test_concurrent_same_key(client):
+    item = client.post("/api/menu_items", auth=ADMIN, json={
+        "title": "Idempotency dish", "category": "Main", "vegetarian": True, "price": "40", "capacity": 4,
+    }).json()
+    def buy(_):
+        response = create_order(client, key="concurrent-same-key", item_id=item["id"])
+        return response.status_code, response.json()
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        results = list(pool.map(buy, [1, 2]))
+    assert [status for status, _ in results] == [201, 201]
+    assert results[0][1]["id"] == results[1][1]["id"]
+    assert client.get(f"/api/menu_items/{item['id']}").json()["capacity"] == 3
+
+
+def test_concurrent_cancellation(client):
+    item = client.post("/api/menu_items", auth=ADMIN, json={
+        "title": "Cancellation dish", "category": "Main", "vegetarian": True, "price": "40", "capacity": 4,
+    }).json()
+    order_id = create_order(client, key="concurrent-cancel", item_id=item["id"]).json()["id"]
+    def cancel(_):
+        return client.post(f"/api/orders/{order_id}/cancel", auth=ALICE).status_code
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        assert list(pool.map(cancel, [1, 2])) == [200, 200]
+    assert client.get(f"/api/menu_items/{item['id']}").json()["capacity"] == 4
 
 
 def test_chat_owner_and_missing_gemini_persisted(client):
@@ -104,6 +138,29 @@ def test_pending_action_confirmation(client):
     assert first.json()["result"]["status"] == "CONFIRMED"
     assert client.post(url, auth=ALICE, json={"confirm": True}).json()["result"] == first.json()["result"]
     assert client.post(url, auth=ALICE, json={"confirm": False}).status_code == 409
+
+
+def test_concurrent_confirmation(client):
+    session_id = client.post("/api/chat/sessions", auth=ALICE, json={"title": "Concurrent action"}).json()["id"]
+    item = client.get("/api/menu_items/3").json()
+    before = item["capacity"]
+    with SessionLocal() as db:
+        user_id = db.scalar(select(User.id).where(User.username == "alice"))
+        action = PendingAction(session_id=session_id, user_id=user_id, action="CREATE",
+            payload={"lines": [{"item_id": item["id"], "title": item["title"],
+                                "quantity": 1, "unit_price": item["price"]}]},
+            expires_at=datetime.now(timezone.utc) + timedelta(minutes=5))
+        db.add(action)
+        db.commit()
+        action_id = action.id
+    def confirm(_):
+        response = client.post(f"/api/chat/actions/{action_id}/confirm", auth=ALICE, json={"confirm": True})
+        return response.status_code, response.json()
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        results = list(pool.map(confirm, [1, 2]))
+    assert [status for status, _ in results] == [200, 200]
+    assert results[0][1]["result"]["id"] == results[1][1]["result"]["id"]
+    assert client.get("/api/menu_items/3").json()["capacity"] == before - 1
 
 
 def test_agent_tools_and_confirmation(client, monkeypatch):
